@@ -18,3 +18,7 @@
 > 1. axios：(1)axios.defaults.headers.common["Authorization"] = "AUTH_TOKEN";这种是设置全局默认Ajax请求头设置。(2)设置拦截器对ajax请求头进行设置。(3)创建实例默认设置。 详情见/js_ajax.js
 > 2. jquery: 使用jquery构造函数上的方法$.ajaxset({})来进行设置。
 
+## 5.跨域访问
+1. 同源策略：跨域的产生来源于现代浏览器所通用的‘同源策略’，所谓同源策略，是指只有在地址的： 1. 协议名 2. 域名 3. 端口名 均一样的情况下，才允许访问相同的cookie、localStorage或是发送Ajax请求等等。若在不同源的情况下访问，就称为跨域。
+2. 解决办法:(1) 服务器（后台）设置允许跨域 header('Access-Control-Allow-Origin:*');//允许所有来源访问 ;header('Access-Control-Allow-Method:POST,GET');//允许访问的方式 ;(2)浏览器设置跨域(3)通过代理允许跨域(4)JSONP
+
